@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //String righeLette= gest.leggiFile("prova.txt", getApplicationContext());
         //Toast.makeText(getApplicationContext(), righeLette, Toast.LENGTH_LONG).show();
 
+        //ascoltatore bottone SCRIVI
         btnScrivi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //ascoltatore bottone LEGGI
         btnLeggi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                gest.leggiFile(nomeFile.getText().toString(), getApplicationContext());
             }
         });
     }

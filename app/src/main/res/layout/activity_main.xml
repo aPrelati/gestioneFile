@@ -10,48 +10,48 @@
         android:id="@+id/visualizzaFile"
         android:layout_width="319dp"
         android:layout_height="272dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginBottom="32dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrivi" />
 
     <Button
         android:id="@+id/leggi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="100dp"
         android:text="LEGGI"
-        app:layout_constraintBottom_toTopOf="@+id/visualizzaFile"
-        app:layout_constraintEnd_toStartOf="@+id/scrivi"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeFile" />
 
     <Button
         android:id="@+id/scrivi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="44dp"
         android:text="SCRIVI"
         app:layout_constraintBottom_toTopOf="@+id/visualizzaFile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeFile" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/leggi"
+        app:layout_constraintTop_toBottomOf="@+id/nomeFile"
+        app:layout_constraintVertical_bias="0.115" />
 
     <EditText
         android:id="@+id/nomeFile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="94dp"
+        android:layout_width="247dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="100dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="Inserisci il nome del file"
         app:layout_constraintBottom_toTopOf="@+id/leggi"
         app:layout_constraintEnd_toEndOf="parent"

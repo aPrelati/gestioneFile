@@ -19,18 +19,18 @@ public class Gestore
     public  String leggiFile(String nomeFile, Context c)
     {
         StringBuilder sb= new StringBuilder();
-        try
+        try //file letto correttamente
         {
             BufferedReader fileIn= new BufferedReader(new InputStreamReader(c.openFileInput(nomeFile)));
             String text="";
             while((text= fileIn.readLine())!= null){
                 sb.append(text+"\n");
             }
-        } catch (FileNotFoundException e)
+        } catch (FileNotFoundException e) //il file non esiste
         {
             e.printStackTrace();
             Log.e("classe Gestore", "il file non esiste");
-        } catch (IOException e)
+        } catch (IOException e) //impossibile leggere il file
         {
             Log.e("classe Gestore", "impossibile leggere il file");
         }
@@ -42,18 +42,18 @@ public class Gestore
         String esito;
         FileOutputStream fileOutput;
         String textWrite= "Testo da scrivere";
-        try
+        try //file apreto e chiuso correttamente
         {
             fileOutput= c.openFileOutput(nomeFile, Context.MODE_PRIVATE);
             fileOutput.write(textWrite.getBytes());
             fileOutput.close();
             esito="File scritto correttamente";
-        } catch (FileNotFoundException e)
+        } catch (FileNotFoundException e) //file non trovato
         {
             e.printStackTrace();
             Log.e("classe Gestore", "impossibile leggere il file in SCRITTURA");
             esito= "File non trovato";
-        } catch (IOException e)
+        } catch (IOException e) //impossibile scrivere sul file
         {
             e.printStackTrace();
             Log.e("classe Gestore", "impossibile scivere sul file");
