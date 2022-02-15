@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         btnLeggi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gest.leggiFile(nomeFile.getText().toString(), getApplicationContext());
+                String esito= gest.leggiFile(nomeFile.getText().toString(), getApplicationContext());
+                Toast.makeText(getApplicationContext(), "esito", Toast.LENGTH_LONG).show();
             }
         });
     }
