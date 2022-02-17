@@ -34,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
         btnLeggi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String txtEsito[];
                 String testo= gest.leggiFile(nomeFile.getText().toString(), getApplicationContext());
-                //Toast.makeText(getApplicationContext(), "esito", Toast.LENGTH_LONG).show();
-                visualizzaFile.setText(testo);
+                txtEsito= testo.split("---");
+                visualizzaFile.setText(txtEsito[0]);
+                Toast.makeText(getApplicationContext(), txtEsito[1], Toast.LENGTH_LONG).show();
             }
         });
 

@@ -19,6 +19,8 @@ public class Gestore
     public  String leggiFile(String nomeFile, Context c)
     {
         StringBuilder sb= new StringBuilder();
+        String txtEsito;
+        String esito;
         try //file letto correttamente
         {
             BufferedReader fileIn= new BufferedReader(new InputStreamReader(c.openFileInput(nomeFile)));
@@ -26,15 +28,21 @@ public class Gestore
             while((text= fileIn.readLine())!= null){
                 sb.append(text+"\n");
             }
+            //leggiE[0]= sb.toString();
+            esito= "file letto correttamente";
         } catch (FileNotFoundException e) //il file non esiste
         {
             e.printStackTrace();
             Log.e("classe Gestore", "il file non esiste");
+            esito= "il file non esiste";
         } catch (IOException e) //impossibile leggere il file
         {
             Log.e("classe Gestore", "impossibile leggere il file");
+            esito= "impossibile leggere il file";
         }
-        return sb.toString();
+        txtEsito= sb.toString()+"---"+esito;
+        //return sb.toString();
+        return txtEsito;
     }
 
     public String scriviFile(String nomeFile, Context c)
